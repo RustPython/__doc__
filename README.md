@@ -27,6 +27,16 @@ or using docker
     __doc__  RustPython
     $ docker run -v $(pwd):/RustPython -w /RustPython/__doc__ python:slim python generate_docs.py ../RustPython docs.inc.rs
 
+
+and do not forget to update cargo before the test
+```
+$ cargo update
+```
+## Why the `__doc__` is not changed?
+
+### Check the old documentation implemented with remarks are still exist
+RustPython prioritizes the user define documentation. Check if the old remarks are remaining in the source code. If it is, simply removing them could solve the issue.
+
 ## Contributing
 
 Contributions are more than welcome, and in many cases we are happy to guide
