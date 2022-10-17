@@ -122,6 +122,9 @@ def traverse_all(root):
             continue
         yield from traverse(module, [module_name], module)
 
+    def f():
+        pass
+
     builtin_types = [
         type(bytearray().__iter__()),
         type(bytes().__iter__()),
@@ -136,10 +139,12 @@ def traverse_all(root):
         type(str().__iter__()),
         type(tuple().__iter__()),
         type(None),
+        type(f),
     ]
     for typ in builtin_types:
         names = ["builtins", typ.__name__]
-        yield names, typ.__doc__
+        if not isinstance(typ.__doc__, str):
+            yield names, typ.__doc__
         yield from traverse(__builtins__, names, typ)
 
 
