@@ -1,7 +1,10 @@
 [package]
 name = "rustpython-doc"
+description = "Python __doc__ database."
 version = "0.3.0"
+authors = ["RustPython Team"]
 edition = "2021"
+license-file = "LICENSE"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
