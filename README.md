@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This project is now archived and has been moved under [RustPython](https://github.com/RustPython/RustPython/tree/main/crates/doc)
+
 <img src="./logo.png" width="125" height="125" align="right" />
 
 # `__doc__` for [RustPython](https://rustpython.github.io/)
